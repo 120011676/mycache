@@ -5,8 +5,11 @@ package com.github.q120011676.mycache.core;
  */
 public interface MyCache {
 
-    Object get(Object key);
-    void set(Object key);
-    void del(Object key);
-    void  clean();
+    Object get(String region, Object key);
+
+    void set(String region, Object key, Object data);
+
+    void del(String region, Object key);
+
+    void clean(String region);
 }
